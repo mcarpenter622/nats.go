@@ -1,4 +1,4 @@
-module github.com/mcarpenter/nats.go
+module github.com/mcarpenter622/nats.go
 
 go 1.16
 
