@@ -893,7 +893,7 @@ func (kv *kvs) Watch(keys string, opts ...WatchOpt) (KeyWatcher, error) {
 	// Used ordered consumer to deliver results.
 	subOpts := []SubOpt{OrderedConsumer()}
 	if !o.includeHistory {
-		subOpts = append(subOpts, DeliverLastPerSubject())
+		subOpts = append(subOpts, DeliverNew())
 	}
 	if o.metaOnly {
 		subOpts = append(subOpts, HeadersOnly())
